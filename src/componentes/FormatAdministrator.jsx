@@ -32,7 +32,7 @@ export default function FormatAdministrator() {
       <div className="d-flex m-3">
         <Table hover className="m-4">
           <thead>
-            <tr className="bg-orange">
+            <tr className="bg-orange-light">
               <th></th>
               <th>Posición / Columna</th>
               <th>Longitud Campo</th>
@@ -54,7 +54,7 @@ export default function FormatAdministrator() {
               </td>
               <td></td>
             </tr>
-            <tr className="bg-orange">
+            <tr className="bg-orange-light">
               <td>Nombre y Apellido destinatario</td>
               <td>
                 <input type="text" />
@@ -80,7 +80,7 @@ export default function FormatAdministrator() {
               </td>
               <td></td>
             </tr>
-            <tr className="bg-orange">
+            <tr className="bg-orange-light">
               <td>Nro Documento</td>
               <td>
                 <input type="text" />
@@ -106,7 +106,7 @@ export default function FormatAdministrator() {
               </td>
               <td></td>
             </tr>
-            <tr className="bg-orange">
+            <tr className="bg-orange-light">
               <td>Localidad</td>
               <td>
                 <input type="text" />
@@ -132,7 +132,7 @@ export default function FormatAdministrator() {
               </td>
               <td></td>
             </tr>
-            <tr className="bg-orange">
+            <tr className="bg-orange-light">
               <td>CPA</td>
               <td>
                 <input type="text" />
@@ -158,7 +158,7 @@ export default function FormatAdministrator() {
               </td>
               <td></td>
             </tr>
-            <tr className="bg-orange">
+            <tr className="bg-orange-light">
               <td>Cantidad de piezas</td>
               <td>
                 <input type="text" />
@@ -191,7 +191,7 @@ export default function FormatAdministrator() {
           </tbody>
         </Table>
         <div className="align-self-end d-grid gap-2 mb-4">
-          <Button variant="warning">Aceptar</Button>
+          <Button variant="warning" className="bg-orange">Aceptar</Button>
           <Button variant="outline-warning">Volver</Button>
         </div>
       </div>
