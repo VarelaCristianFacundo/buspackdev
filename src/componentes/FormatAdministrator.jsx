@@ -1,32 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, NavDropdown } from "react-bootstrap";
 import Table from "react-bootstrap/Table";
 
 export default function FormatAdministrator() {
+  const [format, setFormat] = useState("Seleccione Formato...");
+  const [caracter, setCaracter] = useState(",(coma)");
   return (
     <>
       <h5 className="mt-5">ADMINISTRADOR DE FORMATOS PARA SOLICITUDES</h5>
       <div className="d-flex justify-content-start gap-5 mt-5 ms-5">
         <NavDropdown
+          style={{width:"15%"}}
           className="border border-dark rounded-1 p-2"
-          title="Seleccione Formato... "
-          id="nav-dropdown"
+          title={format}
+          id="nav-dropdown"          
         >
-          <NavDropdown.Item eventKey="4.1">XLS (Excel)</NavDropdown.Item>
-          <NavDropdown.Item eventKey="4.2">CSV</NavDropdown.Item>
-          <NavDropdown.Item eventKey="4.3">TXT</NavDropdown.Item>
+          <NavDropdown.Item eventKey="4.1" onClick={()=>{setFormat("XLS")}}>XLS (Excel)</NavDropdown.Item>
+          <NavDropdown.Item eventKey="4.2" onClick={()=>{setFormat("CSV")}}>CSV</NavDropdown.Item>
+          <NavDropdown.Item eventKey="4.3" onClick={()=>{setFormat("TXT")}}>TXT</NavDropdown.Item>
         </NavDropdown>
-        <p className="pt-2">Caracter Separador</p>
+        <p>Caracter Separador</p>
         <NavDropdown
+          style={{width:"15%"}}
           className="border border-dark rounded-1 p-2"
-          title=", (coma)"
+          title={caracter}
           id="nav-dropdown"
         >
-          <NavDropdown.Item eventKey="4.1">TAB (Tabulacion)</NavDropdown.Item>
-          <NavDropdown.Item eventKey="4.2">
-            " " (doble comilla)
-          </NavDropdown.Item>
-          <NavDropdown.Item eventKey="4.3">; (punto y coma)</NavDropdown.Item>
+          <NavDropdown.Item eventKey="4.1" onClick={()=>{setCaracter(`, (coma)`)}}>, (coma)</NavDropdown.Item>
+          <NavDropdown.Item eventKey="4.1" onClick={()=>{setCaracter("TAB")}}>TAB (Tabulacion)</NavDropdown.Item>
+          <NavDropdown.Item eventKey="4.2" onClick={()=>{setCaracter(`" " doble comilla`)}}>" " (doble comilla)</NavDropdown.Item>
+          <NavDropdown.Item eventKey="4.3" onClick={()=>{setCaracter(`; (punto y coma)`)}}>; (punto y coma)</NavDropdown.Item>
         </NavDropdown>
       </div>
       <div className="d-flex m-3">

@@ -44,3 +44,9 @@
 .bg-orange{
   background-color: #ff8000;
 }
+
+.bg-orange:hover{
+  background-color: #964b00;
+  border-color: #964b00;
+  color: white;
+}
